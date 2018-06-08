@@ -1,23 +1,18 @@
-# Boilered JS :tea:
+# Runction :tea:
 
-A boilerplate project that helps setting up the basic process when building an app :rocket:
+Usefull ramda functions. :rocket:
 
 
 ## Development :computer:
 ```bash
-$ git clone git@github.com:thechatshop/boiler-js.git
-$ cd boiler-js
+$ git clone git@github.com:thechatshop/runction.git
+$ cd runction
 $ npm install
 ```
 
 ## Install :hammer:
 ```bash
-$ npm install @thechatshop/your-module-name
-```
-
-## Usage
-```javascript
-// Placeholder - Write your own quick example
+$ npm install @thechatshop/runction
 ```
 
 ## Testing :bomb:
@@ -26,7 +21,7 @@ $ npm run test     # add -- --watch to monitor for changes
 ```
 
 ## Deploy :ship:
-This app will automatically get published under `@thechatshop/your-module-name` on npm (when new code is on master and a new tag exists with `vX.X.X` format)
+This app will automatically get published under `@thechatshop/runction` on npm (when new code is on master and a new tag exists with `vX.X.X` format)
 
 :rotating_light: **Check the [config.yml](./.circleci/config.yml) for more**
 
