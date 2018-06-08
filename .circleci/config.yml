@@ -25,6 +25,7 @@ jobs:
       - checkout
       - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
       - run: npm install
+      - run: npm install ramda
       - run: npm test
   npm_publish:
     docker:
@@ -33,4 +34,5 @@ jobs:
       - checkout
       - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
       - run: npm install
+      - run: npm install ramda
       - run: npm publish
