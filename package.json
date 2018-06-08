@@ -1,6 +1,6 @@
 {
   "name": "runction",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Usefull ramda functions.",
   "main": "src/index.js",
   "scripts": {
@@ -43,7 +43,10 @@
       "camelcase": [
         1
       ],
-      "unicorn/filename-case": ["error", "camelCase"]
+      "unicorn/filename-case": [
+        "error",
+        "camelCase"
+      ]
     }
   }
 }
