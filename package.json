@@ -42,6 +42,10 @@
     "rules": {
       "camelcase": [
         1
+      ],
+      "unicorn/filename-case": [
+        "error",
+        "camelCase"
       ]
     }
   }
