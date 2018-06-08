@@ -1,7 +1,7 @@
 {
-  "name": "thechatshop/runctions",
+  "name": "runction",
   "version": "1.0.0",
-  "description": "",
+  "description": "Usefull ramda functions.",
   "main": "src/index.js",
   "scripts": {
     "precommit": "lint-staged",
@@ -11,7 +11,7 @@
     "test": "jest --coverage"
   },
   "keywords": [],
-  "author": "",
+  "author": "thanos@thechatshop.com",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
@@ -19,9 +19,11 @@
     "husky": "^0.14.3",
     "jest": "^22.3.0",
     "lint-staged": "^6.1.0",
-    "nodemon": "^1.15.1",
     "prettier": "^1.10.2",
     "xo": "^0.20.3"
+  },
+  "peerDependencies": {
+    "ramda": "^0.25.0"
   },
   "lint-staged": {
     "*.js": [
