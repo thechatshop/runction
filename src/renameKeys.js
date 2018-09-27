@@ -1,4 +1,15 @@
-const { curry, reduce, assoc, keys } = require('ramda');
+const {
+	curry,
+	reduce,
+	assoc,
+	keys,
+	ifElse,
+	not,
+	allPass,
+	is,
+	complement,
+	isEmpty,
+} = require('ramda');
 /**
  * Creates a new object with the own properties of the provided object, but the
  * keys renamed according to the keysMap object as `{oldKey: newKey}`.
@@ -15,11 +26,25 @@ const { curry, reduce, assoc, keys } = require('ramda');
  * renameKeys({ firstName: 'name', type: 'kind', foo: 'bar' })(input)
  * //=> { name: 'Elisia', age: 22, kind: 'human' }
  */
-const renameKeys = curry((keysMap, obj) =>
-	reduce(
-		(acc, key) => assoc(keysMap[key] || key, obj[key], acc),
-		{},
-		keys(obj),
+
+const isNotFunction = x =>
+	not(Object.prototype.toString.call(x) === '[object Function]');
+const isObject = is(Object);
+const isNotEmpty = complement(isEmpty);
+const pass = allPass([isObject, isNotFunction, isNotEmpty]);
+
+const renameKeys = curry(
+	ifElse(
+		(keysMap, obj) => pass(obj),
+		(keysMap, obj) =>
+			reduce(
+				(acc, key) => assoc(keysMap[key] || key, obj[key], acc),
+				{},
+				keys(obj),
+			),
+		() => {
+			throw new Error('Invalid object supplied.');
+		},
 	),
 );
 
