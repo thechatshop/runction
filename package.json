@@ -32,6 +32,9 @@
       "git add"
     ]
   },
+  "jest":{
+    "testURL": "http://localhost"
+  },
   "xo": {
     "envs": [
       "jest"
