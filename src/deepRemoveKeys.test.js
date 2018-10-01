@@ -21,4 +21,10 @@ describe('deepRemoveKeys', () => {
 			expectedArray,
 		);
 	});
+	it('Handles nil values 🎉', () => {
+		expect(deepRemoveKeys(['__typename', 'label'], null)).toEqual(null);
+		expect(deepRemoveKeys(['__typename', 'label'], undefined)).toEqual(
+			undefined,
+		);
+	});
 });
