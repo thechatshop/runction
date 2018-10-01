@@ -1,6 +1,6 @@
 {
   "name": "runction",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Usefull ramda functions.",
   "main": "src/index.js",
   "scripts": {
